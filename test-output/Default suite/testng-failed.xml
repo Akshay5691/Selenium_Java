@@ -5,8 +5,8 @@
     <classes>
       <class name="TestPackage.HomePageTestCases">
         <methods>
+          <include name="verifyUserIsAbleToSearchItemsWithValidData" invocation-numbers="0"/>
           <include name="logResult"/>
-          <include name="verifyUserIsAbleToSearchItemWithValidData" invocation-numbers="0"/>
           <include name="CloseTheBrowser"/>
           <include name="createTestForExtentReport"/>
           <include name="setUpExtentReport"/>

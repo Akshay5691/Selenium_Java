@@ -1,91 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-13T00:44:42 IST" name="Suite" finished-at="2025-05-13T00:44:44 IST" duration-ms="2260">
+  <suite started-at="2025-10-26T12:07:06 IST" name="Default suite" finished-at="2025-10-26T12:07:24 IST" duration-ms="18065">
     <groups>
       <group name="sanity">
-        <method signature="HomePageTestCases.verifyUserIsAbleToSearchAllProductsWithIphoneBrandWithDescription(java.lang.reflect.Method)[pri:1, instance:TestPackage.HomePageTestCases@3cc41abc]" name="verifyUserIsAbleToSearchAllProductsWithIphoneBrandWithDescription" class="TestPackage.HomePageTestCases"/>
-        <method signature="HomePageTestCases.verifyUserIsAbleToSearchItemWithValidData(java.lang.reflect.Method)[pri:1, instance:TestPackage.HomePageTestCases@3cc41abc]" name="verifyUserIsAbleToSearchItemWithValidData" class="TestPackage.HomePageTestCases"/>
+        <method signature="HomePageTestCases.verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String)[pri:1, instance:TestPackage.HomePageTestCases@320de594]" name="verifyUserIsAbleToSearchItemsWithValidData" class="TestPackage.HomePageTestCases"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2025-05-13T00:44:42 IST" name="Test" finished-at="2025-05-13T00:44:44 IST" duration-ms="2260">
+    <test started-at="2025-10-26T12:07:06 IST" name="Default test" finished-at="2025-10-26T12:07:24 IST" duration-ms="18065">
       <class name="TestPackage.HomePageTestCases">
-        <test-method is-config="true" signature="setUpExtentReport()[pri:0, instance:TestPackage.HomePageTestCases@3cc41abc]" started-at="2025-05-13T00:44:42 IST" name="setUpExtentReport" finished-at="2025-05-13T00:44:42 IST" duration-ms="340" status="PASS">
+        <test-method is-config="true" signature="setUpExtentReport()[pri:0, instance:TestPackage.HomePageTestCases@320de594]" started-at="2025-10-26T12:07:05 IST" name="setUpExtentReport" finished-at="2025-10-26T12:07:06 IST" duration-ms="954" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpExtentReport -->
-        <test-method is-config="true" signature="createTestForExtentReport(java.lang.reflect.Method)[pri:0, instance:TestPackage.HomePageTestCases@3cc41abc]" started-at="2025-05-13T00:44:42 IST" name="createTestForExtentReport" finished-at="2025-05-13T00:44:44 IST" duration-ms="2174" status="PASS">
+        <test-method is-config="true" signature="createTestForExtentReport(java.lang.reflect.Method)[pri:0, instance:TestPackage.HomePageTestCases@320de594]" started-at="2025-10-26T12:07:09 IST" name="createTestForExtentReport" finished-at="2025-10-26T12:07:10 IST" duration-ms="1740" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestPackage.HomePageTestCases.verifyUserIsAbleToSearchAllProductsWithIphoneBrandWithDescription(java.lang.reflect.Method)]]>
+                <![CDATA[public void TestPackage.HomePageTestCases.verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String) throws java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTestForExtentReport -->
-        <test-method signature="verifyUserIsAbleToSearchAllProductsWithIphoneBrandWithDescription(java.lang.reflect.Method)[pri:1, instance:TestPackage.HomePageTestCases@3cc41abc]" started-at="2025-05-13T00:44:44 IST" name="verifyUserIsAbleToSearchAllProductsWithIphoneBrandWithDescription" finished-at="2025-05-13T00:44:44 IST" duration-ms="11" status="PASS">
+        <test-method signature="verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String)[pri:1, instance:TestPackage.HomePageTestCases@320de594]" started-at="2025-10-26T12:07:10 IST" name="verifyUserIsAbleToSearchItemsWithValidData" data-provider="excelData" finished-at="2025-10-26T12:07:11 IST" duration-ms="919" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestPackage.HomePageTestCases.verifyUserIsAbleToSearchAllProductsWithIphoneBrandWithDescription(java.lang.reflect.Method)]]>
+                <![CDATA[public void TestPackage.HomePageTestCases.verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String) throws java.io.IOException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iPhone]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToSearchAllProductsWithIphoneBrandWithDescription -->
-        <test-method is-config="true" signature="logResult(org.testng.ITestResult)[pri:0, instance:TestPackage.HomePageTestCases@3cc41abc]" started-at="2025-05-13T00:44:44 IST" name="logResult" finished-at="2025-05-13T00:44:44 IST" duration-ms="9" status="PASS">
+        </test-method> <!-- verifyUserIsAbleToSearchItemsWithValidData -->
+        <test-method is-config="true" signature="logResult(org.testng.ITestResult)[pri:0, instance:TestPackage.HomePageTestCases@320de594]" started-at="2025-10-26T12:07:11 IST" name="logResult" finished-at="2025-10-26T12:07:11 IST" duration-ms="19" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserIsAbleToSearchAllProductsWithIphoneBrandWithDescription status=SUCCESS method=HomePageTestCases.verifyUserIsAbleToSearchAllProductsWithIphoneBrandWithDescription(java.lang.reflect.Method)[pri:1, instance:TestPackage.HomePageTestCases@3cc41abc] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserIsAbleToSearchItemsWithValidData status=SUCCESS method=HomePageTestCases.verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String)[pri:1, instance:TestPackage.HomePageTestCases@320de594] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method is-config="true" signature="createTestForExtentReport(java.lang.reflect.Method)[pri:0, instance:TestPackage.HomePageTestCases@3cc41abc]" started-at="2025-05-13T00:44:44 IST" name="createTestForExtentReport" finished-at="2025-05-13T00:44:44 IST" duration-ms="18" status="PASS">
+        <test-method is-config="true" signature="createTestForExtentReport(java.lang.reflect.Method)[pri:0, instance:TestPackage.HomePageTestCases@320de594]" started-at="2025-10-26T12:07:11 IST" name="createTestForExtentReport" finished-at="2025-10-26T12:07:12 IST" duration-ms="328" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestPackage.HomePageTestCases.verifyUserIsAbleToSearchItemWithValidData(java.lang.reflect.Method) throws java.io.IOException]]>
+                <![CDATA[public void TestPackage.HomePageTestCases.verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String) throws java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTestForExtentReport -->
-        <test-method signature="verifyUserIsAbleToSearchItemWithValidData(java.lang.reflect.Method)[pri:1, instance:TestPackage.HomePageTestCases@3cc41abc]" started-at="2025-05-13T00:44:44 IST" name="verifyUserIsAbleToSearchItemWithValidData" finished-at="2025-05-13T00:44:44 IST" duration-ms="2" status="PASS">
+        <test-method signature="verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String)[pri:1, instance:TestPackage.HomePageTestCases@320de594]" started-at="2025-10-26T12:07:12 IST" name="verifyUserIsAbleToSearchItemsWithValidData" data-provider="excelData" finished-at="2025-10-26T12:07:18 IST" duration-ms="5917" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestPackage.HomePageTestCases.verifyUserIsAbleToSearchItemWithValidData(java.lang.reflect.Method) throws java.io.IOException]]>
+                <![CDATA[public void TestPackage.HomePageTestCases.verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String) throws java.io.IOException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iPod Nano]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToSearchItemWithValidData -->
-        <test-method is-config="true" signature="logResult(org.testng.ITestResult)[pri:0, instance:TestPackage.HomePageTestCases@3cc41abc]" started-at="2025-05-13T00:44:44 IST" name="logResult" finished-at="2025-05-13T00:44:44 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyUserIsAbleToSearchItemsWithValidData -->
+        <test-method is-config="true" signature="logResult(org.testng.ITestResult)[pri:0, instance:TestPackage.HomePageTestCases@320de594]" started-at="2025-10-26T12:07:18 IST" name="logResult" finished-at="2025-10-26T12:07:18 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserIsAbleToSearchItemWithValidData status=SUCCESS method=HomePageTestCases.verifyUserIsAbleToSearchItemWithValidData(java.lang.reflect.Method)[pri:1, instance:TestPackage.HomePageTestCases@3cc41abc] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserIsAbleToSearchItemsWithValidData status=SUCCESS method=HomePageTestCases.verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String)[pri:1, instance:TestPackage.HomePageTestCases@320de594] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method is-config="true" signature="CloseTheBrowser()[pri:0, instance:TestPackage.HomePageTestCases@3cc41abc]" started-at="2025-05-13T00:44:44 IST" name="CloseTheBrowser" finished-at="2025-05-13T00:44:45 IST" duration-ms="427" status="PASS">
+        <test-method is-config="true" signature="createTestForExtentReport(java.lang.reflect.Method)[pri:0, instance:TestPackage.HomePageTestCases@320de594]" started-at="2025-10-26T12:07:18 IST" name="createTestForExtentReport" finished-at="2025-10-26T12:07:18 IST" duration-ms="430" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPackage.HomePageTestCases.verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTestForExtentReport -->
+        <test-method signature="verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String)[pri:1, instance:TestPackage.HomePageTestCases@320de594]" started-at="2025-10-26T12:07:18 IST" name="verifyUserIsAbleToSearchItemsWithValidData" data-provider="excelData" finished-at="2025-10-26T12:07:24 IST" duration-ms="5990" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPackage.HomePageTestCases.verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String) throws java.io.IOException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iPod Touch]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbleToSearchItemsWithValidData -->
+        <test-method is-config="true" signature="logResult(org.testng.ITestResult)[pri:0, instance:TestPackage.HomePageTestCases@320de594]" started-at="2025-10-26T12:07:24 IST" name="logResult" finished-at="2025-10-26T12:07:24 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserIsAbleToSearchItemsWithValidData status=SUCCESS method=HomePageTestCases.verifyUserIsAbleToSearchItemsWithValidData(java.lang.reflect.Method,java.lang.String)[pri:1, instance:TestPackage.HomePageTestCases@320de594] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method is-config="true" signature="CloseTheBrowser()[pri:0, instance:TestPackage.HomePageTestCases@320de594]" started-at="2025-10-26T12:07:24 IST" name="CloseTheBrowser" finished-at="2025-10-26T12:07:24 IST" duration-ms="269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseTheBrowser -->
       </class> <!-- TestPackage.HomePageTestCases -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
