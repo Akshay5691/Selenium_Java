@@ -34,7 +34,7 @@ public class HomePageTestCases extends BasePage {
 		String actualProduct =ObjHome.getProductText();
 		String expectedProduct= "iPhone";
 		Assert.assertEquals(expectedProduct,actualProduct );	
-	   System.out.println(method.getName() + " : passed");
+	  
 		}
 		
 		catch(AssertionError ae) {		
