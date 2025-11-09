@@ -13,7 +13,7 @@ public class DataProviders {
 	 @DataProvider(name = "excelData")
 	    public Object[][] getDataFromExcel() throws IOException {
 	        // Dynamic file path and sheet name
-	        String filePath = System.getProperty("user.dir") + "/TestDataFiles/MobileNames.xlsx";
+	        String filePath = System.getProperty("user.dir") + "\\src\\test\\resources\\MobileNames.xlsx";
 	        String sheetName = "iphones";
 	        return ExcelUtility.getExcelData(filePath, sheetName);
 	    }

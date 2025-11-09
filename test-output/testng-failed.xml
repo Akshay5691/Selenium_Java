@@ -5,10 +5,10 @@
     <classes>
       <class name="TestPackage.HomePageTestCases">
         <methods>
-          <include name="verifyUserIsAbleToSearchItemsWithValidData" invocation-numbers="0"/>
           <include name="logResult"/>
           <include name="CloseTheBrowser"/>
           <include name="createTestForExtentReport"/>
+          <include name="verifyUserCanSelectCountryAndStartShopping"/>
           <include name="setUpExtentReport"/>
         </methods>
       </class> <!-- TestPackage.HomePageTestCases -->

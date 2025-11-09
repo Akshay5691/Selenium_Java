@@ -3,6 +3,7 @@ package PageObjects;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,16 +13,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+
 public class HomePageObjects {
 
-     WebDriver driver; 
-     WebDriverWait wait;
-  
-    public HomePageObjects(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5)); 
-        PageFactory.initElements(driver, this); // Initialize elements
-    }
+   
 
    
     // 1Css selector --- tag name[attribute='value'] | Xpath1   ----//tag name[@Atribute='value']
@@ -50,90 +49,69 @@ public class HomePageObjects {
     
     // WebElements..............................................................................................................
     
-    
-    
-    @FindBy(name = "search")                                                         //name Locator
-    private WebElement
-    searchBox;
+	
+	   AndroidDriver driver;
+	   WebDriverWait wait;
 
-     @FindBy(xpath="//button[@class='btn btn-default btn-lg']")
-   private WebElement
-    searchButton;
-    
-    @FindBy(linkText = "iPhone")                                                    //Link Text Locator
-    private WebElement  
-    iphoneProduct;
-    
-    @FindBy(id="description")                                                        // id locator
-    private WebElement
-    checkBoxToSearchInDescription;
-    
-    @FindBy(xpath="//input[@type='button'and @id='button-search']")                   //  1Xpath - and - function  
-    private WebElement 
-    searchButtonToCheckProductInDescription;
-    
-    @FindBy(xpath="//div[@class='caption']/h4/a")                                    // 1xpath parent to child
-    private List<WebElement>
-    allSearchedProducts;
-    
-    @FindBy(xpath="//button[contains(@class,'btn btn-inverse btn-block btn-lg')]")    // Xpath1- contains - function
-    private  WebElement   
-    cartButton;
-    
-    @FindBy(xpath="(//button/span[@class='hidden-xs hidden-sm "
-   	+ "hidden-md' and text()='Add to Cart'])[1]")                                    // Xpath1- and - function with index
-    private  WebElement   
-    addToCartButtonOnProduct;
-    
-    @FindBy(linkText="Qafox.com")                                                   // link Text
-    private  WebElement   
-    logoQaFox;
-    
-    @FindBy(xpath = "(//button[starts-with(@data-original-title,'Add to Wish')])[1]")        //Xpath1 - Starts with - function
-    private WebElement                                                                       // index
-    addToWishListButtonOnProduct;
-   
-    
-    // Actions (Methods).....................................................................................................
-    
-    public void clickOnSearchBox() {
-        searchBox.click();
-    }
-    
-    public void enterTextInSearchBox(String item) {
-        searchBox.sendKeys(item);
-    }
-
-    public void clickOnSearchButton() {
-    	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn btn-default btn-lg']")));
-        searchButton.click();
-    }
- 
-  public void selectTheCheckBoxToSearchProductInDescription() {
-	  checkBoxToSearchInDescription.click();
-    }
-  
-   public void clickSearchButtonToCheckProductInDescription() {
-	   searchButtonToCheckProductInDescription.click();
-   }
-   
-  // ...........................................................................................................
-   
-   //return strings 
-   public String getProductText() { 
- 	 String iphoneText= iphoneProduct.getText();
- 	  return iphoneText;
- 	  }
-   
-   public List<String> allSearchedProductsWithDescription() {
-	    List<String> allProductsSearchedWithDescription = new ArrayList<>();
-
-	    for (WebElement product : allSearchedProducts) {
-	    	allProductsSearchedWithDescription.add(product.getText());
+	    public HomePageObjects(AndroidDriver driver) {
+	    	   this.driver = driver;
+	    	PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+	    	 wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	     
 	    }
 
-	    return allProductsSearchedWithDescription;
-	}
+
+	    // ✅ Web elements (Appium elements) with @AndroidFindBy
+	    @AndroidFindBy(id = "com.androidsample.generalstore:id/spinnerCountry")
+	    private WebElement countryDropdown;
+
+	    @AndroidFindBy(id = "com.androidsample.generalstore:id/nameField")
+	    private WebElement nameField;
+
+	    @AndroidFindBy(id = "com.androidsample.generalstore:id/radioMale")
+	    private WebElement genderRadioMale;
+
+	    @AndroidFindBy(id = "com.androidsample.generalstore:id/btnLetsShop")
+	    private WebElement shopButton;
+	    
+	    private WebElement addToCartButton(String productName) {
+	        String xpath = "//android.widget.TextView[@text='" + productName + "']" +
+                    "/parent::android.widget.LinearLayout" +
+                    "//android.widget.TextView[@resource-id='com.androidsample.generalstore:id/productAddCart']";
+	        		return driver.findElement(AppiumBy.xpath(xpath));
+	    }
+
+	    // ✅ Action methods
+	    public void selectCountry(String countryName) {
+	        countryDropdown.click();
+	        driver.findElement(AppiumBy.androidUIAutomator(
+	                "new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + countryName + "\"));"))
+	                .click();
+	    }
+
+	    public void enterName(String name) {
+	        nameField.sendKeys(name);
+	    }
+
+	    public void selectGenderMale() {
+	        genderRadioMale.click();
+	    }
+
+	    public void clickShopButton() {
+	        shopButton.click();
+	    }
+	    public void ScrollToProduct(String Product) {
+	        driver.findElement(AppiumBy.androidUIAutomator(
+	                "new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + Product + "\"));"));
+	    }
+	    
+	    public void addProductToCart(String productName) {
+	 
+	    	wait.until(ExpectedConditions.elementToBeClickable(addToCartButton(productName)));
+	    	addToCartButton(productName).click();
+	    }
+    
+    
    }
-   
+
 
