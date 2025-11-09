@@ -76,14 +76,14 @@ public class BasePage {
     
     @AfterSuite
     public void CloseTheBrowser(){
-  		 driver.quit();	
+  		// driver.quit();	
     	 extent.flush();
      }
     
     @BeforeMethod(alwaysRun =true)
     public void createTestForExtentReport(Method method) {  	
          driver.manage().deleteAllCookies();
-    	 driver.get("https://tutorialsninja.com/demo/");		
+    	 driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");		
         test = extent.createTest(method.getName());
     }
     
@@ -98,7 +98,7 @@ public class BasePage {
         } else {
             test.skip(result.getThrowable());
         }
-        driver.close();
+       // driver.close();
     }
 	
 	
